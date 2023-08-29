@@ -1,0 +1,43 @@
+<zk>
+	<window apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm')@init('com.sdd.latihan.MyViewModel')"
+		validationMessages="@id('vmsgs')">
+		<grid>
+			<columns>
+				<column></column>
+				<column></column>
+			</columns>
+			<rows>
+				<row>Nama
+					<textbox value="@bind(vm.employee.nama)" width="100%"></textbox>
+				</row>
+				<row>Alamat
+					<textbox value="@bind(vm.employee.alamat)" width="100%"></textbox>
+				</row>
+			</rows>
+			<foot>
+				<footer></footer>
+				<footer>
+					<button label="Submit" onClick="@command('dosubmit')"></button>
+				</footer>
+			</foot>
+		</grid>
+		
+		<separator></separator>
+		<separator></separator>
+		<separator></separator>
+		<separator></separator>
+		
+		<grid id="gridEmployee">
+			<columns>
+				<column align="center" width="80px">No.</column>
+				<column align="center">Nama</column>
+				<column align="center">Alamat</column>
+				<column align="center">Action</column>
+			</columns>
+			<rows>
+			
+			</rows>
+		</grid>
+	</window>
+</zk>
